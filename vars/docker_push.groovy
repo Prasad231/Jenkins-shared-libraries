@@ -4,5 +4,6 @@ def call(String DOCKER_USERNAME, String imagename, String imagetag  ){
   sh "docker login -u ${env.DOCKER_USERNAME} -p ${env.DOCKER_PASSWORD}"
   sh "docker image tag notesapp:latest ${env.DOCKER_USERNAME}/notesapp:latest"  
   sh "docker push ${env.DOCKER_USERNAME}/${imagename}:${imagetag}"  
+  echo "Pushing built image to DockerHub competed "
 }
 }
