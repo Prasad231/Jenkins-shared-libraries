@@ -1,5 +1,5 @@
-def call(String dockerimage, String imagetag){
+def call(String imagename, String imagetag){
   echo "Building a code using docker"
-  sh "docker build -t ${dockerimage}:${imagetag} ."
+  sh "docker build -t ${imagename}:${imagetag} ."
   echo "Building a code using docker completed."
 }
